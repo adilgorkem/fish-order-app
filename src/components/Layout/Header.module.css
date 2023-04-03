@@ -1,0 +1,40 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.*/
+
+  width: 100%;
+  height: 5rem;
+  background-color: #006994;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  /*box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit*/
+
+  z-index: 10;
+}
+
+.main-image {
+  width: 100%;
+  height: 25rem;
+  z-index: 0;
+
+  overflow: hidden;
+  /*The overflow property specifies what should happen if content overflows an element's box, only works for block elements with a specified height.
+  hidden:	The overflow is clipped, and the rest of the content will be invisible.*/
+}
+
+.main-image img {
+  width: 110%;
+  height: 100%;
+
+  object-fit: cover;
+  /*cover:	The replaced content is sized to maintain its aspect ratio while filling the element's entire content box. The object will be clipped to fit*/
+
+  transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
+}
